@@ -1,14 +1,12 @@
 
+import Navbar from 'daisyui/components/navbar'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      
-      <h1 className='text-4xl bg-amber-400'>hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</h1>
-      
-      
+        <Navbar></Navbar>   
     </>
   )
 }
