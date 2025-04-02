@@ -1,10 +1,10 @@
 import Navbar from '../src/Components/Navbar/Navbar'
 import './App.css'
-import Banner from './Components/Banner/Banner'
-import Players from './components/Players/Players'
+import Banner from '../src/Components/Banner/Banner'
+import Players from '../src/Components/Players/Players'
 import { useState } from 'react'
 import { useEffect } from "react";
-import Footer from './Components/Footer/Footer'
+import Footer from '../src/Components/Footer/Footer'
 
 
 function App() {
