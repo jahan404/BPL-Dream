@@ -1,4 +1,6 @@
 import logo from '../../../public/images/logo.png'
+import coinImage from '../../../public/images/coin.png'
+
 
 const Navbar = ({coin}) => {
     return (
@@ -15,7 +17,7 @@ const Navbar = ({coin}) => {
                 <span>Schedules</span>
             </div>
 
-            <button className='btn btn-lg bg-transparent flex justify-center items-center'>{coin} Coin <span><img src="/public/images/coin.png" alt="" /></span></button>
+            <button className='btn btn-lg bg-transparent flex justify-center items-center'>{coin} Coin <span><img src={coinImage} alt="" /></span></button>
 
             </div>
 

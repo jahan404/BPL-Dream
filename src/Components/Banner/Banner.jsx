@@ -1,8 +1,9 @@
+import bannerImage from '../../../public/images/banner-main.png'
 
 const Banner = ({handleCoin}) => {
     return (
         <div className="w-11/12 mx-auto rounded-4xl bg-[url('/images/bg-shadow.png')] bg-no-repeat bg-cover bg-black text-center space-y-6 py-24 mb-24">
-            <img className="mx-auto" src="/public/images/banner-main.png" alt="" />
+            <img className="mx-auto" src={bannerImage} alt="" />
 
             <h1 className="text-white font-bold text-3xl">Assemble Your Ultimate Dream 11 Cricket Team</h1>
             <p className="text-white opacity-70 tracking-widest">Beyond Boundaries Beyond Limits</p>

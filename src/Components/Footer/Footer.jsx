@@ -1,4 +1,5 @@
-import React from 'react';
+import footerImage from '../../../public/images/logo-footer.png';
+
 
 const Footer = () => {
     return (
@@ -27,7 +28,7 @@ const Footer = () => {
     <footer className='bg-black pt-40 '>
 
     <div>
-        <img src="/public/images/logo-footer.png" alt="" className='mx-auto pt-40 pb-20'/>
+        <img src={footerImage} alt="" className='mx-auto pt-40 pb-20'/>
     </div>
 
     <div class="w-11/12 mx-auto flex justify-between items-start  gap-20 text-neutral-content pb-24 ">
