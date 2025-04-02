@@ -5,15 +5,15 @@ import SelectedPlayer from '../../Components/SelectedPlayer/SelectedPlayer';
 const Players = ({handleState,state,handleSelectedPlayer,selectedPlayer,handleDeletedPlayerCard,players}) => {
 
     return (
-        <div className="w-11/12 mx-auto mb-24">
+        <div className="w-11/12 mx-auto mb-44">
 
             <div className="flex justify-end my-12">
 
             <div>
-            <button onClick={()=>handleState(true)} className={state? "btn btn-lg rounded-none border-none rounded-tl-xl rounded-bl-xl bg-[#E7FE29]": "btn btn-lg rounded-none border-none rounded-tl-xl rounded-bl-xl"}>Available</button>
+            <button onClick={()=>handleState(true)} className={state? "btn btn-lg rounded-none border-none rounded-tl-xl rounded-bl-xl bg-[#E7FE29]": "btn btn-lg rounded-none border-none rounded-tl-xl rounded-bl-xl text-gray-500"}>Available</button>
 
 
-            <button onClick={()=>handleState(false)} className={state?"btn btn-lg rounded-none border-none rounded-tr-xl rounded-br-xl": "btn btn-lg rounded-none border-none rounded-tr-xl rounded-br-xl bg-[#E7FE29]"}>Selected ({selectedPlayer.length})</button>
+            <button onClick={()=>handleState(false)} className={state?"btn btn-lg rounded-none border-none rounded-tr-xl rounded-br-xl text-gray-500": "btn btn-lg rounded-none border-none rounded-tr-xl rounded-br-xl bg-[#E7FE29]"}>Selected ({selectedPlayer.length})</button>
             </div>
 
             </div>

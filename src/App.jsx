@@ -1,9 +1,10 @@
-import Navbar from './components/Navbar/Navbar'
+import Navbar from '../src/Components/Navbar/Navbar'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import Players from './components/Players/Players'
 import { useState } from 'react'
 import { useEffect } from "react";
+import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -56,6 +57,12 @@ const handleDeletedPlayerCard = deleteCard =>{
      <Banner handleCoin={handleCoin}></Banner>
 
      <Players state={state} handleState={handleState} handleSelectedPlayer={handleSelectedPlayer} selectedPlayer={selectedPlayer} handleDeletedPlayerCard={handleDeletedPlayerCard} players={players}></Players>
+
+
+
+     <Footer></Footer>
+
+
     </>
   )
 }

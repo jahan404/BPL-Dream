@@ -40,7 +40,7 @@ const Player = ({player,handleSelectedPlayer}) => {
 
     <div className="flex justify-between items-center">
     <p className="font-bold text-sm">Price : {player.biddingPrice}</p>
-    <button onClick={()=>handleSelectedPlayer(player)} className="btn bg-transparent">Choose Player</button>
+    <button onClick={()=>handleSelectedPlayer(player)} className="btn bg-transparent hover:bg-[#E7FE29]">Choose Player</button>
     </div>
   </div>
 
