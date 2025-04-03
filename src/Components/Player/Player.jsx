@@ -1,6 +1,6 @@
 import { CgProfile } from "react-icons/cg";
 import { CiFlag1 } from "react-icons/ci";
-
+ 
 const Player = ({player,handleSelectedPlayer}) => {
     return (
         <div>

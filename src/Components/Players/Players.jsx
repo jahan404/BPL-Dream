@@ -1,4 +1,4 @@
-
+ 
 import Player from '../../Components/Player/Player'
 import SelectedPlayer from '../../Components/SelectedPlayer/SelectedPlayer';
 
@@ -33,7 +33,7 @@ const Players = ({handleState,state,handleSelectedPlayer,selectedPlayer,handleDe
                 : 
 
                 <div>
-                    <h1 className="font-black text-2xl my-10">Selected Player ({selectedPlayer.length}/{players.length})</h1>
+                    <h1 className="font-black text-2xl my-10">Selected Player ({selectedPlayer.length}/6)</h1>
                     <SelectedPlayer selectedPlayer={selectedPlayer} handleDeletedPlayerCard={handleDeletedPlayerCard}></SelectedPlayer>
                 </div>
             }

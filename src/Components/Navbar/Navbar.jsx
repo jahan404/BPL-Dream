@@ -17,7 +17,7 @@ const Navbar = ({coin}) => {
                 <span>Schedules</span>
             </div>
 
-            <button className='btn btn-lg bg-transparent flex justify-center items-center'>{coin} Coin <span><img src={coinImage} alt="" /></span></button>
+            <button className='btn btn-lg bg-transparent flex justify-center items-center font-medium'>{coin} Coin <span><img src={coinImage} alt="" /></span></button>
 
             </div>
 

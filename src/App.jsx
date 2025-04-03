@@ -5,8 +5,12 @@ import Players from '../src/Components/Players/Players'
 import { useState } from 'react'
 import { useEffect } from "react";
 import Footer from '../src/Components/Footer/Footer'
+// react-toastify handling
+import { ToastContainer, toast ,Zoom } from 'react-toastify';
 
 
+
+ 
 function App() {
 // useState of claim free coin
 const [coin,setCoin] = useState(0)
@@ -19,22 +23,45 @@ const [players, setPlayers] = useState([])
 
 
 
-// handle coin
+// handle claim free credit coin
 const handleCoin = (newCoin) =>{
   setCoin(coin+newCoin)
 }
-// handle state
+// handle state of button activation
 const handleState =(newState) =>{
   setState(newState)
 }
+
 // handle selected player
 const handleSelectedPlayer = newSelectedPlayer =>{
-  setSelectedPlayer([...selectedPlayer,newSelectedPlayer])
+  
+  if(coin < newSelectedPlayer.biddingPrice){
+    notifyNotEnoughCoin()
+  }
+
+
+  
+  else{
+
+    const isExist = selectedPlayer.find(p=>p.playerId===newSelectedPlayer.playerId)
+
+    if(isExist){
+      notifyALreadySelectedPlayer(newSelectedPlayer.name)
+    }
+    else if(selectedPlayer.length>5){
+      notifySixPlayersCompleted()
+    }
+    else{
+    setSelectedPlayer([...selectedPlayer,newSelectedPlayer])
+    setCoin(coin-newSelectedPlayer.biddingPrice)
+    notifySuccessfulPlayerSelection(newSelectedPlayer.name)
+    }
+  }
 }
 
 // fetch data
 useEffect(()=>{
-  fetch('fakedata.json')
+  fetch('fakeData.json')
   .then(response=>response.json())
   .then(data=>setPlayers(data))
   },[])
@@ -45,7 +72,66 @@ const handleDeletedPlayerCard = deleteCard =>{
   const newSelectedPlayerAfterDeletion = selectedPlayer.filter(c=>c.playerId!==deleteCard.playerId)
   setSelectedPlayer(newSelectedPlayerAfterDeletion)
 }
+// react-toastify handling
+const notifyNotEnoughCoin = () => {
+  toast.error('Insufficient Balance. Claim some coin and try again!', {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    transition: Zoom,
+    });
+}
 
+const notifySuccessfulPlayerSelection = (playerName)=> {
+  toast.success(`Congratulations! ${playerName} is now in your squad!!`, {
+    position: "top-center",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    transition: Zoom,
+    });
+  }
+
+  const notifyALreadySelectedPlayer =(playerName) => {
+    toast.warn(
+      <>
+      WARNING! <br /> {playerName} is already in your squad!!
+    </>, 
+    {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Zoom,
+      });
+  }
+
+  const notifySixPlayersCompleted=()=>{
+    toast.info("You've Already selected 6 players. Your desired Squad is Complete.", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Zoom,
+      });
+  }
 
 
 

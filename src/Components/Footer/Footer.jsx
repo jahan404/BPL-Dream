@@ -14,7 +14,7 @@ const Footer = () => {
     <p className='text-sm text-gray-600'>Get the latest updates and news right in your inbox!</p>
 
     <div className='flex gap-4 justify-center items-center'>
-    <input type="text" placeholder="Enter your email" class="input" />
+    <input type="text" placeholder="Enter your email" className="input" />
 
     <button className='btn btn-lg bg-gradient-to-r from-fuchsia-400 from-5% to-yellow-500 to-80%'>Subscribe</button>
     </div>
@@ -31,28 +31,28 @@ const Footer = () => {
         <img src={footerImage} alt="" className='mx-auto pt-40 pb-20'/>
     </div>
 
-    <div class="w-11/12 mx-auto flex justify-between items-start  gap-20 text-neutral-content pb-24 ">
+    <div className="w-11/12 mx-auto flex justify-between items-start  gap-20 text-neutral-content pb-24 ">
 
   <div className='w-1/5'>
-    <h6 class="footer-title">About Us</h6>
+    <h6 className="footer-title">About Us</h6>
     <p className='text-sm text-gray-300'>We are a passionate team dedicated to providing the best services to our customers.</p>
   </div>
 
   <div className='flex flex-col'>
-    <h6 class="footer-title">Quick Links</h6>
+    <h6 className="footer-title">Quick Links</h6>
     
     <div className='text-sm text-gray-300 flex flex-col'>
-    <li class="link link-hover">Home</li>
-    <li class="link link-hover">Services</li>
-    <li class="link link-hover">About</li>
-    <li class="link link-hover">Contact</li>
+    <li className="link link-hover">Home</li>
+    <li className="link link-hover">Services</li>
+    <li className="link link-hover">About</li>
+    <li className="link link-hover">Contact</li>
     </div>
   </div>
 
   <div className=''>
-    <h6 class="footer-title">Subscribe</h6>
+    <h6 className="footer-title">Subscribe</h6>
     <div className='flex justify-center items-center'>
-    <input type="text" placeholder="Enter your email" class="input text-black" />
+    <input type="text" placeholder="Enter your email" className="input text-black" />
 
     <button className='btn bg-gradient-to-r from-fuchsia-400 from-5% to-yellow-500 to-80% border-none'>Subscribe</button>
     </div>
