@@ -30,7 +30,7 @@ const SelectedPlayer = ({selectedPlayer,handleDeletedPlayerCard}) => {
                 }
             </div>
 
-            <button className="btn btn-lg bg-[#E7FE29] mt-8">Add More Player</button>
+            <a href="/"><button className="btn btn-lg bg-[#E7FE29] mt-8">Add More Player</button></a>
 
         
         </div>
